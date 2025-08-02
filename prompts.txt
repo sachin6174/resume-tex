@@ -1,0 +1,10 @@
+ use '/Users/sachinkumar/Desktop/resume-tex/resume.tex' to populate data in '/Users/sachinkumar/Desktop/resume-tex/Sachin 
+  Resume New.tex' according to format of '/Users/sachinkumar/Desktop/resume-tex/twoColumnResumeDemo.tex' all data of 
+  '/Users/sachinkumar/Desktop/resume-tex/resume.tex' should be there in '/Users/sachinkumar/Desktop/resume-tex/Sachin Resume 
+  New.tex'
+
+it rendered in two page  
+
+are you sure no data loss from '/Users/sachinkumar/Desktop/resume-tex/resume.tex' is there      
+
+just after linkedin the bottom area of page is blank and from exprience it shows on next page

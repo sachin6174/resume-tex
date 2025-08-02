@@ -1,0 +1,140 @@
+%%%%%%%%%%%%%%%%%
+% This is a two-column CV template based on moderncv.cls
+% Adapted for Sachin Kumar's resume
+%%%%%%%%%%%%%%%%%
+
+% environment
+\documentclass[11pt,a4paper]{moderncv}
+\moderncvtheme[blue]{banking}
+\nopagenumbers{}
+
+\usepackage[T1]{fontenc}
+\usepackage{inputenc}
+\usepackage[scale=0.9]{geometry}
+\usepackage{tabularx}
+\usepackage{mathpazo}
+
+% macro
+\renewcommand*{\labelitemi}{-}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+
+\newcommand*{\experienceentry}[5][1.5mm]{
+    \subsection{#2} \vspace{-1.5mm}
+    \begin{tabularx}{\textwidth}{LR}
+        {\itshape #3} & {\itshape #4, #5}
+    \end{tabularx}
+    \par\addvspace{#1}
+}
+
+\newcommand*{\educationentry}[4][0.5mm]{
+    \begin{tabularx}{\textwidth}{LR}
+        {\bfseries #3} & {\bfseries #4} \\
+    \end{tabularx}
+    {\itshape #2}
+    \par\addvspace{#1}
+}
+
+\newcommand*{\scoreentry}[3][2.5mm]{
+    {\bfseries #2} \\
+    {\itshape #3}
+    \par\addvspace{#1}
+}
+
+% preamble
+\firstname{Sachin}
+\familyname{Kumar}
+\address{Bangalore, India}{}
+
+% document
+\begin{document}
+\maketitle
+\vspace{-9.0mm}
+\begin{tabularx}{\textwidth}{C C C}
+    \emailsymbol\enspace \emaillink{sachinmehtab@gmail.com} & \mobilephonesymbol\enspace +91 9501841073 & \faLinkedin\enspace \href{https://linkedin.com/in/sachinkumar6174}{linkedin.com/in/sachinkumar6174}
+\end{tabularx}
+\vspace{-2.0mm}
+
+% left column
+\begin{minipage}[t]{0.62\textwidth}
+\section{EXPERIENCE}
+\experienceentry{Mac/iOS Developer}{42 Gears Mobility Systems Private Limited}{July 2023 - Current}{Bangalore}
+
+\begin{itemize}
+    \item Developed app management jobs (PKG, DMG installation/upgrade/uninstall) using command-line tools, shell scripting, and XPC communication.
+    \item Implemented file transfer systems, geofencing with reverse geocoding, and location-based job execution.
+    \item Built device monitoring (uptime, hardware changes), user management, and remote device actions (reboot, shutdown).
+    \item Created analytics collection for device events and app usage with structured data transmission.
+    \item Resolved issues in network extensions, QR enrollment, log encryption, WebView, APNs, and job handling architecture.
+    \item Worked on process daemonization, agent launching, menu bar apps, and packaging (DMG, PKG).
+\end{itemize}
+\vspace{2.0mm}
+
+\experienceentry{Mac/iOS Developer Intern}{42 Gears Mobility Systems Private Limited}{February 2023 - June 2023}{}
+
+\begin{itemize}
+    \item Learned Swift, UIKit, SwiftUI, and asynchronous programming for optimized performance.
+    \item Gained expertise in PKG/DMG creation, signing, notarization, CoreData, UserDefaults, and Keychain.
+    \item Developed skills in macOS scripting, Jira issue tracking, and SonarQube code quality.
+\end{itemize}
+
+\section{PROJECTS}
+\subsection{NotingDown}
+\begin{itemize}
+    \item SwiftUI and Core Data note-taking app on Apple App Store
+\end{itemize}
+
+\subsection{Secure Text}
+\begin{itemize}
+    \item Chrome extension for text encryption/decryption with Base64/Base32 encoding
+\end{itemize}
+
+\subsection{QR Encoder Decoder}
+\begin{itemize}
+    \item Chrome extension for password-based text encryption with QR code generation
+\end{itemize}
+
+\end{minipage}
+\hfill
+% right column
+\begin{minipage}[t]{0.35\textwidth}
+\section{SUMMARY}
+Mac/iOS Developer with 1+ years experience in SureMDM agent development for macOS device management. Skilled in Swift, system integration, and mobile application development.
+
+\section{SKILLS}
+\begin{tabularx}{\textwidth}{>{\bfseries}l@{\hskip 3.5mm}L}
+Mobile Dev & Swift, iOS, UIKit, SwiftUI \\
+Backend & Objective-C, CoreData \\
+Development & Xcode, MVC/MVVM, Debugging \\
+Testing & XCTest, XCUITest \\
+Web Tech & React, Node \\
+Database & SQL, MongoDB \\
+Tools & Git/GitHub/GitLab
+\end{tabularx}
+
+\section{EDUCATION}
+\educationentry{B.Tech Computer Science Engineering}{Chandigarh Group of Colleges}{Landran Punjab, India}{June 2023}
+\par
+\vspace{3.0mm}
+\educationentry{Intermediate Class 12, Class 10}{Shishu Niketan Public School}{Chandigarh, India}{March 2019}
+
+\section{CONTACT}
+\begin{itemize}
+    \item Website: \href{https://www.sachinserver.in}{sachinserver.in}
+    \item GitHub: \href{https://github.com/sachin6174}{github.com/sachin6174}
+    \item Phone: +91 9501841073
+    \item Email: sachinmehtab@gmail.com
+\end{itemize}
+
+\section{INTERESTS}
+\begin{itemize}
+    \item Reading Hindi Literature
+    \item Drawing Portraits
+    \item Listening to Music
+    \item Exploring New Technologies
+\end{itemize}
+\end{minipage}
+
+\end{document}
