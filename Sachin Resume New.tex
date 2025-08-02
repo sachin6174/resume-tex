@@ -17,6 +17,10 @@
 % macro
 \renewcommand*{\labelitemi}{-}
 
+% Make all hyperlinks underlined
+\let\oldhref\href
+\renewcommand{\href}[2]{\oldhref{#1}{\underline{#2}}}
+
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 \newcolumntype{C}{>{\centering\arraybackslash}X}
 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
@@ -104,15 +108,7 @@
 Mac/iOS Developer with 1+ years experience in SureMDM agent development for macOS device management. Skilled in Swift, system integration, and mobile application development.
 
 \section{SKILLS}
-\begin{tabularx}{\textwidth}{>{\bfseries}l@{\hskip 3.5mm}L}
-Mobile Dev & Swift, iOS, UIKit, SwiftUI \\
-Backend & Objective-C, CoreData \\
-Development & Xcode, MVC/MVVM, Debugging \\
-Testing & XCTest, XCUITest \\
-Web Tech & React, Node \\
-Database & SQL, MongoDB \\
-Tools & Git/GitHub/GitLab
-\end{tabularx}
+\textbf{Swift}, \textbf{iOS}, \textbf{UIKit}, \textbf{SwiftUI}, \textbf{Objective-C}, \textbf{CoreData}, \textbf{Xcode}, \textbf{MVC/MVVM}, \textbf{Debugging}, \textbf{XCTest}, \textbf{XCUITest}, \textbf{React}, \textbf{Node}, \textbf{SQL}, \textbf{MongoDB}, \textbf{Git/GitHub/GitLab}
 
 \section{EDUCATION}
 \educationentry{B.Tech Computer Science Engineering}{Chandigarh Group of Colleges}{Landran Punjab, India}{June 2023}
@@ -123,17 +119,14 @@ Tools & Git/GitHub/GitLab
 \section{CONTACT}
 \begin{itemize}
     \item Website: \href{https://www.sachinserver.in}{sachinserver.in*}
-    \item GitHub: \href{https://github.com/sachin6174}{github.com/sachin6174*}
     \item Phone: +91 9501841073
     \item Email: sachinmehtab@gmail.com
 \end{itemize}
 
-\section{INTERESTS}
+\section{PROFILES}
 \begin{itemize}
-    \item Reading Hindi Literature
-    \item Drawing Portraits
-    \item Listening to Music
-    \item Exploring New Technologies
+    \item LeetCode: \href{https://leetcode.com/u/sachinkumar6174/}{sachinkumar6174*}
+    \item Portfolio: \href{https://sachinserver.in/}{sachinserver.in*}
 \end{itemize}
 \end{minipage}
 
