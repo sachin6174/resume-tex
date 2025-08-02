@@ -26,12 +26,16 @@
 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
 
 \newcommand*{\experienceentry}[5][1.5mm]{
-    \begin{tabularx}{\textwidth}{LR}
-        {\bfseries\large #2} & {\faCalendar\enspace #4 \faMapMarker\enspace #5}
-    \end{tabularx}
-    \vspace{-1mm}
     \begin{tabularx}{\textwidth}{L}
-        {\itshape #3}
+        {\bfseries\large #2}
+    \end{tabularx}
+    \vspace{1mm}
+    \begin{tabularx}{\textwidth}{L}
+        {\bfseries #3}
+    \end{tabularx}
+    \vspace{1mm}
+    \begin{tabularx}{\textwidth}{L}
+        {\faCalendar\enspace #4 \faMapMarker\enspace #5}
     \end{tabularx}
     \par\addvspace{#1}
 }
