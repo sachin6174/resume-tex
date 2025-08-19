@@ -1,0 +1,8 @@
+
+\section{HOBBIES}
+\begin{itemize}
+    \item Exploring AI tools
+    \item Reading Literature
+    \item Drawing
+    \item Listening to Music
+\end{itemize}
