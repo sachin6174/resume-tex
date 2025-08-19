@@ -1,0 +1,26 @@
+Cover Letter Template: AI/ML Developer
+
+[Current Date]
+
+Dear Hiring Manager,
+
+As a recent winner of the Google Cloud Agentic AI Hackathon, I am thrilled to apply for the AI/Machine Learning Developer role at [COMPANY_NAME]. My background in full-stack development, combined with my passion for intelligent system design, positions me uniquely to contribute to your innovative AI initiatives.
+
+Professional Highlights:
+- Top 700 developer in Google Cloud Agentic AI Hackathon (57,000+ participants)
+- Created an AI-powered agricultural advisory platform using advanced AI technologies
+- Expertise in integrating AI solutions across mobile, web, and cloud platforms
+
+My hackathon project exemplifies my approach to AI development: creating intelligent, accessible solutions that solve real-world problems. By developing an AI platform that provides expert agricultural advice, I demonstrated my ability to:
+- Design scalable, intelligent systems
+- Integrate multiple technologies seamlessly
+- Translate complex technical concepts into user-friendly solutions
+
+At 42 Gears, I've further developed my skills in system integration and full-stack development, consistently pushing the boundaries of what's possible with technology. My technical toolkit includes Swift, React, Node.js, Python, and Firebase – allowing me to approach AI challenges with a comprehensive, multi-disciplinary perspective.
+
+I am particularly excited about [COMPANY_NAME]'s work in [SPECIFIC_AI_DOMAIN/PROJECT], and I believe my technical skills and innovative mindset would be a valuable addition to your team.
+
+I look forward to discussing how my background in AI development and system design can contribute to [COMPANY_NAME]'s groundbreaking work.
+
+Sincerely,
+Sachin Kumar

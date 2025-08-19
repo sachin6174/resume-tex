@@ -1,0 +1,18 @@
+# Requirements for Sachin's Skills Matching System
+# Install with: pip install -r requirements.txt
+
+# Core dependencies
+nltk>=3.8
+numpy>=1.21.0
+
+# Optional dependencies for enhanced functionality
+requests>=2.25.1  # For web scraping job descriptions
+beautifulsoup4>=4.10.0  # For parsing HTML job postings
+pandas>=1.3.0  # For data analysis and export features
+matplotlib>=3.5.0  # For generating match score visualizations
+wordcloud>=1.9.0  # For creating skill word clouds
+
+# Development and testing (optional)
+pytest>=6.2.0
+black>=22.0.0  # Code formatting
+flake8>=4.0.0  # Code linting

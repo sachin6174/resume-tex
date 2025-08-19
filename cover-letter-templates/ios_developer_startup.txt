@@ -1,0 +1,21 @@
+Cover Letter Template: iOS Developer (Startup)
+
+[Current Date]
+
+Dear Hiring Manager,
+
+I'm excited to apply for the iOS Developer role at [STARTUP_NAME], where innovation and technical excellence converge. As a developer who recently won the Google Cloud Agentic AI Hackathon, I bring a unique blend of mobile development expertise and cutting-edge problem-solving skills.
+
+At 42 Gears, I've honed my skills in Swift and system integration, developing robust MDM solutions that streamline enterprise mobile management. My recent project at the Google Cloud Agentic AI Hackathon demonstrates my ability to transform complex challenges into elegant, user-centric solutions – precisely the mindset I believe [STARTUP_NAME] values.
+
+Key Differentiators:
+- Winner, Google Cloud Agentic AI Hackathon (Top 700/57,000+ developers)
+- Expert in Swift, iOS development, and cross-platform system integration
+- Proven track record of delivering innovative mobile solutions
+
+My technical portfolio, including the NotingDown iOS app and AI-powered agricultural platform, reflects my commitment to creating impactful technology. I'm particularly drawn to [STARTUP_NAME]'s mission of [SPECIFIC_COMPANY_MISSION/INNOVATION], and I'm confident my skills align perfectly with your team's goals.
+
+I'm eager to discuss how my background in iOS development and AI-driven problem solving can contribute to [STARTUP_NAME]'s continued success.
+
+Sincerely,
+Sachin Kumar
