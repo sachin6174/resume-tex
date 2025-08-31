@@ -1,0 +1,337 @@
+%-------------------------
+% Resume in Latex
+% Author : Abhishek Kumar Gupta
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\RequirePackage{fontawesome}
+\usepackage{tikz}
+\usetikzlibrary{svg.path}
+
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+\usepackage[default]{sourcesanspro}
+% \setsansfont{Arimo}[
+%     Path=./ArimoFonts/,
+%     Scale=0.9,
+%     Extension = .ttf,
+%     UprightFont=*-Regular,
+%     BoldFont=*-Bold,
+%     ItalicFont=*-Italic,
+%     BoldItalicFont=*-BoldItalic
+%     ]
+    
+% \setmonofont[Color={0019D4}]{Courier New}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+% \pagestyle{fancy}
+% \fancyhf{}  % clear all header and footer fields
+% \fancyfoot{}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\large#3} & \textit{\small #4} \\
+      
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+
+
+\begin{center}
+{\Huge \scshape Abhishek Kumar Gupta} \\ \vspace{6pt}
+
+\small 
++91-8566077814 \,|\, 
+\href{mailto:abhibhaiofficial@gmail.com}{abhibhaiofficial@gmail.com} \,|\, 
+\href{https://linkedin.com/in/abhishek-kumar-gupta-727a681bb/}{LinkedIn} \,|\, 
+\href{https://github.com/abhikumar002}{GitHub} \,|\, 
+\href{https://leetcode.com/abhibhaiofficial}{LeetCode} \,|\, 
+\href{https://www.codechef.com/users/codeabhi_123}{CodeChef} \,|\, 
+\href{https://auth.geeksforgeeks.org/user/abhibhaiofficial/}{GeeksforGeeks}
+\end{center}
+
+\vspace{-2pt}
+
+%------RELEVANT WORKING EXEPERIENCE-------
+\section{WORK EXPERIENCE}
+    \resumeSubHeadingListStart
+        \resumeSubheading{ \href{https://www.linkedin.com/feed/update/urn:li:activity:6892339573460926464/} \large{{42Gears Mobility Systems  | Software Engineer - I (SDE-1)}}}{July 2023 -- Present}{\vspace{-15pt}}{.}
+        {\vspace{-15pt}}{.}
+        \vspace{2pt}
+            \resumeItemListStart
+ \resumeItem{\normalsize{{\textbf{\large{Performance Enhancement}}}: Improved API load times by \textbf{40\%} to enhance user experience Successfully.}}
+
+ \resumeItem{\normalsize{{\textbf{\large{Technology Migration}}}: Migrated micro-service to .NET Core API, cutting response time by \textbf{40\%} and achieving \textbf{95\%} test coverage with 50+ X unit tests.}}
+
+ \resumeItem{\normalsize{{\textbf{\large{Database Tools Design}}}: Designed and developed 3 custom console applications to automate database modifications, reducing manual effort by \textbf{30\%} and improving data accuracy.}}
+
+  \resumeItem{\normalsize{{\textbf{\large{Front-End Development}}}: Enhanced the front-end interface based on customer feedback, improved user satisfaction, and reduced page load time by \textbf{15\%}.}}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%------RELEVANT COURSEWORK-------
+\section{INTERNSHIP}
+    \resumeSubHeadingListStart
+        \resumeSubheading{ \href{https://www.linkedin.com/feed/update/urn:li:activity:6892339573460926464/} \large{{42Gears Mobility Systems  | Software Development Engineer - Intern}}}{January 2023 -- June 2023 }{\vspace{-15pt}}{.}
+        {\vspace{-15pt}}{.}
+        \vspace{2pt}
+            \resumeItemListStart
+ \resumeItem{\normalsize{{\textbf{\large{Technology Exposure}}}: Acquired hands-on experience in 10+ technologies (C\#, Dot Net Framework, MongoDB, Kafka, Kubernetes, Nginx, JIRA, Angular, BigQuery, Pub/Sub) through knowledge transfer sessions, allowing immediate contribution to team projects. }}
+
+ \resumeItem{\normalsize{{\textbf{\large{API Enhancement}}}: Built and integrated 5+ new APIs, optimized API response times by \textbf{25\%}, and refactored legacy methods, improving code maintainability and reducing bugs by \textbf{15\%}.}}
+
+ \resumeItem{\normalsize{{\textbf{\large{Proof of Concept (PoC)}}}: Integrated iframe technology, increasing responsiveness to UI by \textbf{ 20\%} and reducing page load duration by \textbf{15\%}. Resolved technical challenges, improving project efficiency.}}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+%  \vspace{-11pt}
+
+ %-----------PROGRAMMING SKILLS-----------
+\section{SKILLS}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{\normalsize{Languages:}}{ 
+     \normalsize{C\#, C++, Python, C, Java (Familiar)}} \\
+     \textbf{\normalsize{Web Technologies:}}{ 
+     \normalsize{HTML, CSS, JavaScript, TypeScript}} \\
+     \textbf{\normalsize{Frameworks:}}{ \normalsize{ASP.NET Core, Angular, Django, QT5, NetBeans}} \\
+     \textbf{\normalsize{Databases: }}{ \normalsize{MongoDB, SQL, SQL Server, BigQuery}} \\
+     \textbf{\normalsize{Tools and Technologies: }}{\normalsize{Jira, GitLab, Grafana, Nginx, Apache Kafka, Kubernetes}} \\
+     \textbf{\normalsize{Cloud Platforms: }}{\normalsize{AWS (S3, Lambda), GCP (Pub/Sub, BigQuery)}} \\
+    %  \textbf{\normalsize{Graduation :}}{\normalsize{ }} \\
+    }}
+    
+ \end{itemize}
+%  \vspace{1pt}
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Chandigarh Group of Colleges Technical Campus}{August 2019 - May 2023}
+      {Bachelor of Engineering in Computer Science, secured an aggregate of - \textbf{79\%}}{Jhanjeri, Mohali}
+       
+      %  \resumeSubheading
+      % {Darshan Academy}{Mar. 2017 - May 2019}
+      % {C.B.S.E., Secured an aggregate of - \textbf{76.4\%}}{Ludhiana, Punjab}
+    %   {hello world}
+  \resumeSubHeadingListEnd
+%   \vspace{-3pt}
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+    \vspace{1pt}
+    \resumeSubHeadingListStart
+       \resumeProjectHeading
+          {\href{https://github.com/abhikumar002/tecDrop}{\textbf{\large{\underline{TecDrop}}}}
+\hspace{0.1cm} 
+\large{\textit{– Built with} Django, AWS, Razor Pay REST API, PostgreSQL, Heroku.}}{March 2022}
+        %   \vspace{-10pt}
+          \resumeItemListStart
+            \resumeItem{\normalsize{Designed and Implemented a \textbf{Web-based} platform enabling users to write and share technology-focused blogs.}}
+            % \resumeItem{\normalsize{Implemented Groups  in website which increase productivity 80\%  of the website.}}
+            \resumeItem{\normalsize{Execute \textbf{Pagination} with a maximum limit of 5 technical fact posts on each page.}}
+            \resumeItem{\normalsize{Features cover are \textbf{Login}, \textbf{Sign up}, \textbf{Adding Profile picture}, \textbf{Adding Tech Blog}, updating your own Tech Blog using \textbf{CRUD operations} which increase Productivity by  \textbf{80\%} of the website.}}
+            
+            \resumeItem{\normalsize{ The code is open-source at GitHub at the following link: }\textcolor{accent} {\href{https://github.com/abhikumar002/tecDrop} {\underline{\normalsize{https://github.com/abhikumar002/tecDrop}}.}}}
+            
+             % \resumeItem{\normalsize{ Site is live at the following link:      }\textcolor{accent} {\href{https://tecdrop.herokuapp.com/} {\underline{\normalsize{https://tecdrop.herokuapp.com/}}.}}}
+            
+            % \resumeItem{\normalsize{ Site is live at the following link:      }\textcolor{accent} {\href{Live Project Link} {\underline{\normalsize{nou}}}}}
+          \resumeItemListEnd 
+          \vspace{-9pt}
+           
+          % \vspace{-9pt}
+          
+          %   \vspace{-9pt}     
+     
+                    
+    \resumeSubHeadingListEnd
+     \vspace{1pt}
+% \vspace{-11pt}
+
+
+
+%-----------EXPERIENCE-----------
+ \section{CERTIFICATIONS}
+    \vspace{0pt}
+    \resumeItemListStart
+        % \resumeItem{\normalsize{Solved \textbf{200+} questions on \textbf{Leetcode} of different difficulty levels.}}
+         
+          \resumeItem{\normalsize{Programming in adv. C++ : NPTEL, IIT-KGP (NPTEL21CS55S2386008403005270)}}
+          \vspace{-3pt}
+           \resumeItem{\normalsize{Programming in C : NPTEL, IIT-KGP (NPTEL21CS54S2392015903093193)}}
+           \vspace{-3pt}
+            
+            \resumeItem{\normalsize{Web Development from Scratch - Eduonix}}
+            \vspace{-3pt}
+            
+            % \resumeItem{\normalsize{HTML - Sololearn }}
+            % \vspace{-3pt}
+        %   \resumeItem{\normalsize{}\textcolor{accent} {\href{https://www.codechef.com/users/star_1801} {\underline{\normalsize{Codechef | 3-star | 1781 rating}}}}}
+        %   \resumeItem{\normalsize{}\textcolor{accent} {\href{https://leetcode.com/tanuj1811/} {\underline{\normalsize{Leetcode | 200+ solved ques. | 1600 rating}}}}}
+    \resumeItemListEnd
+% \vspace{-1pt}
+ 
+ %-----------CERTIFICATIONS---------------
+\section{ACHIEVEMENTS}
+
+\vspace{0pt}
+    \resumeItemListStart
+         % \resumeItem{\normalsize{}\textcolor{accent} {\href{https://truecertificates.com/verified/7GAPDEVWMU} {\underline{\normalsize{Letter Of Recommendation (Sparks Foundation)}}}}}
+         
+         \resumeItem{\normalsize{Secured 233rd rank in the final round of Innovate India Coding Championship (IICC) in August 2022.}}
+         \resumeItem{\normalsize{Solved 500+ problems on LeetCode, Hackerrank, GeeksforGeeks and CodeChef.}}
+            \resumeItem{\normalsize{Attained 3rd position in a college-level mathematics quiz competition.}}
+    \resumeItemListEnd
+    % $\sbullet[.75] \hspace{0.1cm}$ \textcolor{accent} {\href{https://www.codechef.com/users/star_1801} {\underline{\normalsize{Letter of Recommendation(Sparks Foundation)}}}} \hspace{1.6cm}
+    % $\sbullet[.75] \hspace{0.15cm}$\textcolor{accent}
+    % {\href{https://leetcode.com/tanuj1811}
+    % {\underline{\normalsize{300+ problems solved on Leetcode / Hackkerrank / GfG / CodeChef}}}} \hspace{1cm}
+    % $\sbullet[.75] \hspace{0.5cm}$\textcolor{accent}
+    % {\href{https://geeksforgeeks.org/user/tanujsharma56673/practice}
+    % {\underline{\normalsize{GeeksForGeeks( In top 20 coder from college.)}}}}\hspace{1.45cm}
+
+ %-----------Hobbies---------------
+% \section{CO-CURRICULAR ACTIVITIES}
+
+% \vspace{-1pt}
+    % \resumeItemListStart
+    %      \resumeItem{\normalsize{}\textcolor{accent} {\href{https://github.com/tanuj1811/bigM-Java-Web-Application} {\underline{\normalsize{Codechef}}}}}
+         
+    %      \resumeItem{\normalsize{}\textcolor{accent} {\href{https://leetcode.com/tanuj1811/} {\underline{\normalsize{Leetcode}}}}}
+         
+    %      \resumeItem{\normalsize{}\textcolor{accent} {\href{https://auth.geeksforgeeks.org/user/tanujsharma56673/practice} {\underline{\normalsize{GeeksForGeeks}}}}}
+    % \resumeItemListEnd
+    % $\sbullet[.75] \hspace{0.1cm}$ 
+    % {\normalsize{ Videography, Photography, Cricket, Editing, Badminton, Travelling}}
+    % \hspace{1.6cm}
+    % $\sbullet[.75] \hspace{0.15cm}$\textcolor{accent}
+    % {\href{https://leetcode.com/tanuj1811}
+    % {\underline{\normalsize{Leetcode | 200+ solved ques. | 1600 rating}}}} \hspace{1cm}
+    % $\sbullet[.75] \hspace{0.5cm}$\textcolor{accent}
+    % {\href{https://geeksforgeeks.org/user/tanujsharma56673/practice}
+    % {\underline{\normalsize{GeeksForGeeks| 50+ ques}}}}\hspace{1.45cm}
+
+
+
+\end{document}
