@@ -1,0 +1,251 @@
+%-------------------------
+% Resume in Latex
+% Author : Sachin Kumar (Migrated from moderncv format)
+% Based on ATS-friendly template
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\RequirePackage{fontawesome}
+\usepackage{tikz}
+\usetikzlibrary{svg.path}
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+%----------FONT OPTIONS----------
+\usepackage[default]{sourcesanspro}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\large#3} & \textit{\small #4} \\
+      
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+{\Huge \scshape Sachin Kumar} \\ \vspace{6pt}
+
+\small 
++91 9501841073 \,|\, 
+\href{mailto:sachinmehtab@gmail.com}{sachinmehtab@gmail.com} \,|\, 
+Bengaluru, Karnataka, India \,|\, 
+\href{https://linkedin.com/in/sachinkumar6174}{LinkedIn} \,|\, 
+\href{https://github.com/sachin6174}{GitHub} \,|\, 
+\href{https://leetcode.com/u/sachinkumar6174/}{LeetCode} \,|\, 
+\href{https://www.sachinserver.in}{sachinserver.in}
+\end{center}
+
+\vspace{-2pt}
+
+%----------SUMMARY----------
+\section{SUMMARY}
+Mac/iOS Developer with 2.7 years of experience in Swift, SwiftUI, Core Data, and macOS/iOS development. Skilled in Xcode, Cocoa, UIKit, and RESTful API integration with expertise in building secure, scalable, user-friendly enterprise applications. Experienced in App Store deployment and applying MVC, MVVM, and VIPER to deliver maintainable, testable solutions. Currently contributing to enterprise-grade applications as a Software Engineer.
+
+%------WORK EXPERIENCE-------
+\section{WORK EXPERIENCE}
+    \resumeSubHeadingListStart
+        \resumeSubheading{Mac/iOS Developer}{\href{https://www.42gears.com/}{42 Gears Mobility Systems Private Limited}}{July 2023 -- Present}{Bangalore}
+        \vspace{2pt}
+            \resumeItemListStart
+                \resumeItem{\normalsize{Developed app management jobs (PKG, DMG installation/upgrade/uninstall) using command-line tools, shell scripting, XPC communication, and daemonization.}}
+                \resumeItem{\normalsize{Implemented Downloading Manager (For File Transfer Job) with resumable downloads, progress tracking, concurrent and serial downloads with worker processes.}}
+                \resumeItem{\normalsize{Implemented Geofencing with reverse geocoding, and location-based job execution.}}
+                \resumeItem{\normalsize{Built device monitoring (uptime, hardware changes), user management, and remote device actions (reboot, shutdown).}}
+                \resumeItem{\normalsize{Implemented Core Data for persistent data storage and management.}}
+                \resumeItem{\normalsize{Contributed in code migration from MVVM to VIPER.}}
+                \resumeItem{\normalsize{Created analytics collection for device events and app usage with structured data transmission.}}
+                \resumeItem{\normalsize{Resolved issues in network extensions, QR enrollment, log encryption, WebView, APNs, and job handling architecture.}}
+                \resumeItem{\normalsize{Worked on process daemonization, agent launching, menu bar apps, and packaging (DMG, PKG).}}
+                \resumeItem{\normalsize{Implemented Just In Time (JIT) Access for elevated privileges on demand.}}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%------INTERNSHIP-------
+\section{INTERNSHIP}
+    \resumeSubHeadingListStart
+        \resumeSubheading{Mac/iOS Developer Intern}{\href{https://www.42gears.com/}{42 Gears Mobility Systems Private Limited}}{February 2023 -- June 2023}{Bangalore}
+        \vspace{2pt}
+            \resumeItemListStart
+                \resumeItem{\normalsize{Learned Swift, UIKit, SwiftUI, and asynchronous programming for optimized performance.}}
+                \resumeItem{\normalsize{Gained expertise in PKG/DMG creation, signing, notarization, CoreData, UserDefaults, and Keychain.}}
+                \resumeItem{\normalsize{Developed skills in macOS scripting, Jira issue tracking, and SonarQube code quality.}}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+    \vspace{1pt}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\href{https://www.42gears.com/products/mobile-device-management/suremdm-agent-for-macos-past-releases/}{\textbf{\large{\underline{SureMDM Agent for macOS}}}} \hspace{0.1cm} 
+            \large{\textit{– Enterprise Device Management Platform}}}{Professional Project}
+            \resumeItemListStart
+                \resumeItem{\normalsize{Enterprise macOS device management agent with app lifecycle management, security policies, and remote administration}}
+            \resumeItemListEnd 
+            \vspace{-9pt}
+
+        \resumeProjectHeading
+            {\href{https://github.com/sachin6174/NotingDown}{\textbf{\large{\underline{NotingDown}}}} \hspace{0.1cm} 
+            \large{\textit{– Built with SwiftUI, Core Data}}}{Personal Project}
+            \resumeItemListStart
+                \resumeItem{\normalsize{SwiftUI and Core Data note-taking app available on \href{https://apps.apple.com/us/app/notingdown/id123456789}{Apple App Store}}}
+            \resumeItemListEnd 
+            \vspace{-9pt}
+
+        \resumeProjectHeading
+            {\href{https://github.com/sachin6174/Guitar-Utility}{\textbf{\large{\underline{Guitar Utility}}}} \hspace{0.1cm} 
+            \large{\textit{– Built with SwiftUI}}}{Personal Project}
+            \resumeItemListStart
+                \resumeItem{\normalsize{SwiftUI app for guitar tuning and metronome beats available on \href{https://apps.apple.com/us/app/guitar-utility/id6751228342}{Apple App Store}}}
+            \resumeItemListEnd 
+            \vspace{-9pt}
+
+        \resumeProjectHeading
+            {\href{https://github.com/sachin6174/secure-text-chrome-extension}{\textbf{\large{\underline{Secure Text}}}} \hspace{0.1cm} 
+            \large{\textit{– Built with JavaScript, Chrome APIs}}}{Personal Project}
+            \resumeItemListStart
+                \resumeItem{\normalsize{\href{https://chromewebstore.google.com/detail/secure-text/ankgchfieiimiijhlcjcongijapefmei}{Chrome extension} for text encryption/decryption with Base64/Base32 encoding}}
+            \resumeItemListEnd 
+            \vspace{-9pt}
+    \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{SKILLS}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{\normalsize{Languages:}}{ 
+     \normalsize{Swift, Objective-C}} \\
+     \textbf{\normalsize{Frameworks \& UI:}}{ 
+     \normalsize{UIKit, SwiftUI, Xcode}} \\
+     \textbf{\normalsize{Data \& Storage:}}{ \normalsize{CoreData, SQL, MongoDB}} \\
+     \textbf{\normalsize{Testing \& Patterns: }}{ \normalsize{XCTest, XCUITest, MVC/MVVM/VIPER, Debugging}} \\
+     \textbf{\normalsize{Concurrency \& Web: }}{\normalsize{Swift Concurrency, React, Node}} \\
+     \textbf{\normalsize{Tools \& Platforms: }}{\normalsize{Git/GitHub/GitLab/JIRA, Data Structures, Algorithms}} \\
+     \textbf{\normalsize{AI Tools: }}{\normalsize{AI - Copilot, ClaudeCode, ChatGPT}} \\
+    }}
+ \end{itemize}
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Chandigarh Group of Colleges}{August 2019 - May 2023}
+      {Bachelor of Engineering in Computer Science, CGPA: \textbf{7.9}}{Jhanjeri, Mohali}
+  \resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS-----------
+\section{ACHIEVEMENTS}
+    \vspace{0pt}
+    \resumeItemListStart
+        \resumeItem{\normalsize{\href{https://github.com/abhikumar002/Agentic-Gig-Project}{\textbf{Google Cloud Agentic AI Hackathon 2025}}: Selected among top 700 teams from 57,000+ developers. Built an AI-powered platform providing farmers expert advice using Next.js, Firebase, Python, and Kotlin.}}
+    \resumeItemListEnd
+
+%-----------HOBBIES---------------
+\section{INTERESTS}
+    \vspace{0pt}
+    \resumeItemListStart
+        \resumeItem{\normalsize{Exploring AI tools, Reading Literature, Drawing, Listening to Music}}
+    \resumeItemListEnd
+
+\end{document}
