@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -99,7 +100,7 @@
             margin-bottom: 16px;
             font-size: 28px;
             color: var(--accent-color);
-            border: 1px solid rgba(0,0,0,0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .card-title {
@@ -174,7 +175,7 @@
 
         .modal-header {
             padding: 16px 24px;
-            border-bottom: 1px solid rgba(0,0,0,0.06);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -188,7 +189,7 @@
         }
 
         .close-btn {
-            background: rgba(0,0,0,0.06);
+            background: rgba(0, 0, 0, 0.06);
             border: none;
             width: 36px;
             height: 36px;
@@ -201,7 +202,7 @@
         }
 
         .close-btn:hover {
-            background: rgba(0,0,0,0.1);
+            background: rgba(0, 0, 0, 0.1);
         }
 
         .close-btn svg {
@@ -218,13 +219,14 @@
             position: relative;
         }
 
-        iframe, .preview-image {
+        iframe,
+        .preview-image {
             width: 100%;
             height: 100%;
             border: none;
             display: block;
         }
-        
+
         .preview-image {
             object-fit: contain;
             padding: 20px;
@@ -232,17 +234,29 @@
 
         /* Animations */
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         @keyframes slideUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
 
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -262,7 +276,10 @@
             <div class="modal-header">
                 <span class="modal-title" id="modalTitle">Resume Preview</span>
                 <button class="close-btn" onclick="closeModal()">
-                    <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                    </svg>
                 </button>
             </div>
             <div class="modal-body" id="modalBody">
@@ -272,36 +289,26 @@
     </div>
 
     <script>
-        const resumes = [
-            { file: "AYUSH SHARMA IOS.pdf", name: "Ayush Sharma" },
-            { file: "Bilal Khan IOS.pdf", name: "Bilal Khan" },
-            { file: "DHAVAL VORA IOS.pdf", name: "Dhaval Vora" },
-            { file: "Dheeraj Kumar Sharma IOS.png", name: "Dheeraj Kumar Sharma" },
-            { file: "HARDIK MINESHKUMAR TRIVEDI IOS.pdf", name: "Hardik Mineshkumar Trivedi" },
-            { file: "HIRAK JYOTI BORAH IOS.pdf", name: "Hirak Jyoti Borah" },
-            { file: "Jahanzeb Sohail IOS.pdf", name: "Jahanzeb Sohail" },
-            { file: "Maurya Ajaykumar IOS.pdf", name: "Maurya Ajaykumar" },
-            { file: "Praveen Pali IOS 2ndformat.pdf", name: "Praveen Pali (Alt Format)" },
-            { file: "Praveen Pali IOS.pdf", name: "Praveen Pali" },
-            { file: "RAVI SOLANKI IOS.pdf", name: "Ravi Solanki" },
-            { file: "SagarMahindarkar_iOS_Dev.pdf.pdf", name: "Sagar Mahindarkar" },
-            { file: "Sathyaseelan S IOS.pdf", name: "Sathyaseelan S" },
-            { file: "VED PRAKASH MISHRA IOS.pdf", name: "Ved Prakash Mishra" },
-            { file: "Vikesh Prasad IOS.pdf", name: "Vikesh Prasad" },
-            { file: "Yahia Samir IOS.pdf", name: "Yahia Samir" },
-            { file: "Yang Lee IOS.pdf", name: "Yang Lee" }
-        ];
-
         const grid = document.getElementById('resumeGrid');
         const modalOverlay = document.getElementById('modalOverlay');
         const modalBody = document.getElementById('modalBody');
         const modalTitle = document.getElementById('modalTitle');
 
-        function renderResumes() {
+        async function fetchResumes() {
+            try {
+                const response = await fetch('/api/resumes');
+                const resumes = await response.json();
+                renderResumes(resumes);
+            } catch (error) {
+                console.error('Error fetching resumes:', error);
+                grid.innerHTML = '<p style="text-align:center; col-span:3; color:red;">Error loading resumes. Make sure server.py is running.</p>';
+            }
+        }
+
+        function renderResumes(resumes) {
             grid.innerHTML = resumes.map((resume, index) => {
                 const isPdf = resume.file.toLowerCase().endsWith('.pdf');
                 const icon = isPdf ? '📄' : '🖼️';
-                const type = isPdf ? 'PDF Document' : 'Image File';
 
                 return `
                     <div class="card" style="animation-delay: ${index * 0.05}s" onclick="openModal('${resume.file}', '${resume.name}')">
@@ -319,9 +326,8 @@
             modalBody.innerHTML = ''; // Clear previous content
 
             const isPdf = file.toLowerCase().endsWith('.pdf');
-            
+
             if (isPdf) {
-                // Using generic object or iframe for PDF
                 const iframe = document.createElement('iframe');
                 iframe.src = file;
                 iframe.type = 'application/pdf';
@@ -339,11 +345,11 @@
 
         function closeModal(event) {
             if (event && event.target !== modalOverlay && !event.target.classList.contains('close-btn') && !event.target.closest('.close-btn')) return;
-            
+
             modalOverlay.classList.remove('active');
             document.body.style.overflow = ''; // Restore scrolling
-            
-            // Clear content after animation to stop video/audio if any
+
+            // Clear content after animation
             setTimeout(() => {
                 modalBody.innerHTML = '';
             }, 300);
@@ -354,7 +360,9 @@
             if (e.key === 'Escape') closeModal();
         });
 
-        renderResumes();
+        // Initialize
+        fetchResumes();
     </script>
 </body>
+
 </html>
