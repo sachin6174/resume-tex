@@ -1,0 +1,269 @@
+%-------------------------
+% Resume in Latex
+% Based on ATS-friendly template
+%------------------------
+
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\RequirePackage{fontawesome}
+\usepackage{tikz}
+\usetikzlibrary{svg.path}
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+%----------FONT OPTIONS----------
+\usepackage[default]{sourcesanspro}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\large#3} & \textit{\small #4} \\
+      
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+{\Huge \scshape RAMYASHRI} \\ \vspace{6pt}
+
+\small 
++91 9790735828 \,|\, 
+\href{mailto:kramyashri@gmail.com}{kramyashri@gmail.com} \,|\, 
+Bangalore, India \,|\, 
+\textbf{Immediate Joiner} \\
+\textbf{Total Experience: 14 Years} \,|\, 
+\textbf{Relevant Quality Experience: 10+ Years}
+\end{center}
+
+\vspace{-2pt}
+
+%----------SUMMARY----------
+\section{PROFESSIONAL SUMMARY}
+Quality Assurance and Audit Professional with 14 years of IT industry experience, including 10+ years in Quality Management, Process Audits, and Compliance. Expertise in ISO 27001 (ISMS), ISO 9001 (QMS), ISO 20000 (IT Service Management), CMMI, ITIL, Agile, DevOps, and Risk Management. Proficient in conducting lifecycle audits, supporting external certifications, and ensuring compliance with contractual and regulatory standards.
+
+%----------CORE COMPETENCIES----------
+\section{CORE COMPETENCIES}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \begin{multicols}{2}
+      \begin{itemize}[leftmargin=*, label=\tiny$\bullet$]
+        \item ISO 27001:2013 (ISMS, Information Security – Lead Auditor)
+        \item ISO 9001:2015 (QMS)
+        \item ISO 20000:2018 (ITSM)
+        \item CMMI
+        \item ITIL v4 Foundation
+        \item Agile (Scrum), Kanban, DevOps
+        \item SDLC (Waterfall \& Agile)
+        \item Risk Management \& RCA
+        \item Process Audits \& Compliance Management
+        \item Metrics \& Process Performance
+        \item Continual Service Improvement (CSI)
+        \item Incident \& Change Management
+        \item Stakeholder Management \& Senior Management Reporting
+      \end{itemize}
+     \end{multicols}
+    }}
+ \end{itemize}
+ \vspace{-15pt}
+
+
+%------WORK EXPERIENCE-------
+\section{PROFESSIONAL EXPERIENCE}
+    \resumeSubHeadingListStart
+        \resumeSubheading{Audit Program Manager}{Jun 2020 -- Jun 2025}
+        {Infosys Ltd}{}
+        \vspace{2pt}
+            \resumeItemListStart
+                \resumeItem{\normalsize{Led end-to-end Internal Audits across multiple Business Units and Vertical portfolios.}}
+                \resumeItem{\normalsize{Conducted lifecycle audits (Initiation, Transition, Service Delivery, Pre-Renewal, Closure) for Application Development, Maintenance, Testing, and Agile projects.}}
+                \resumeItem{\normalsize{Ensured compliance with SOW, contractual commitments, ISO standards, and organizational quality goals, thereby minimizing non-conformities to less than 25\% to 30\%.}}
+                \resumeItem{\normalsize{Facilitated QMS, ISMS, ITSMS, BCMS, Risk Management, and Metrics governance across accounts.}}
+                \resumeItem{\normalsize{Conducted CMMI v2.0 Level 5 readiness and sustenance audits across practice areas.}}
+                \resumeItem{\normalsize{Coordinated ISO certification audits (New, Surveillance, Recertification) including audit planning, sampling strategy, and liaison with external auditors.}}
+                \resumeItem{\normalsize{Verified corrective actions, root cause analysis, and evidence validation for non-conformities, and achieved low repeat findings (approx. 1 or 2 in 6 months).}}
+                \resumeItem{\normalsize{Performed stage-gate audits ensuring SDLC compliance and proactive de-risking.}}
+                \resumeItem{\normalsize{Presented audit summaries to Senior Management highlighting risk exposure and mitigation plans.}}
+                \resumeItem{\normalsize{Partnered with SEPG teams on process transformation initiatives.}}
+                \resumeItem{\normalsize{Supported accounts in Defect Prevention, RCA, and continual improvement initiatives, thereby improving CSAT \& VOC by 10\% to 20\%.}}
+                \resumeItem{\normalsize{Drove closure of non-conformities and reduced audit escalations through structured follow-ups.}}
+            \resumeItemListEnd
+
+        \resumeSubheading{Senior QA Analyst}{Jul 2018 -- May 2020}
+        {Softtek}{}
+        \vspace{2pt}
+            \resumeItemListStart
+                \resumeItem{\normalsize{Conducted process audits across Agile and Waterfall projects.}}
+                \resumeItem{\normalsize{Monitored adherence to organizational quality standards and ISO requirements.}}
+                \resumeItem{\normalsize{Facilitated risk management and metrics review meetings.}}
+                \resumeItem{\normalsize{Supported internal compliance assessments and improvement initiatives.}}
+                \resumeItem{\normalsize{Coordinated with delivery teams for defect prevention and service improvement activities.}}
+            \resumeItemListEnd
+
+        \resumeSubheading{Associate (Programmer Analyst)}{Feb 2011 -- Jan 2018}
+        {Cognizant Technology Solutions}{}
+        \vspace{2pt}
+            \resumeItemListStart
+                \resumeItem{\normalsize{\textbf{Technology Stack:} Mainframe (COBOL, JCL, DB2, VSAM), Data Warehousing (Informatica, Cognos).}}
+                \resumeItem{\normalsize{Worked on enhancement, maintenance, and defect fixes for Insurance \& Banking clients.}}
+                \resumeItem{\normalsize{Performed Unit Testing (UT), System Integration Testing (SIT), and release support.}}
+                \resumeItem{\normalsize{Managed batch monitoring and incident management.}}
+                \resumeItem{\normalsize{Collaborated with Business Analysts to analyze BRD and Functional Specifications.}}
+                \resumeItem{\normalsize{Participated in deployment and release management activities.}}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------QUALITY & DOMAIN EXPOSURE-----------
+\section{QUALITY \& DOMAIN EXPOSURE}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{\normalsize{Business Domains:}}{ 
+     \normalsize{Insurance, Banking, Healthcare, Retail, Energy \& Utilities, Travel \& Hospitality}} \\[6pt]
+     \textbf{\normalsize{Tools \& Applications:}}{ 
+     \normalsize{ServiceNow, BMC Remedy, JIRA, HP ALM/QC, Rally, IBM RTC, MS Visio, MS Office}} \\[6pt]
+     \textbf{\normalsize{Methodologies:}}{ 
+     \normalsize{Agile Scrum, Kanban, DevOps, Waterfall, Good understanding on CISSP concepts, Cloud Migration Concepts, SRE}} \\[6pt]
+     \textbf{\normalsize{Soft Skill:}}{ 
+     \normalsize{Good at stakeholder management, Escalation Management and Process facilitation across Project teams and multiple business units.}} \\
+
+    }}
+ \end{itemize}
+
+%-----------KEY ACCOMPLISHMENTS-----------
+\section{KEY ACCOMPLISHMENTS}
+    \vspace{0pt}
+    \resumeItemListStart
+        \resumeItem{\normalsize{Recognized as Best Contributor for supporting CMMI 2.0 transition and ISO 9001 \& 20000 certifications.}}
+        \resumeItem{\normalsize{Received Spot Awards for exceptional process facilitation.}}
+        \resumeItem{\normalsize{Contributed to achieving Best Team Award in Business Support Functions.}}
+        \resumeItem{\normalsize{Certified internally on Auditing Skills \& Techniques.}}
+    \resumeItemListEnd
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Anna University}{}
+      {B.E. -- Electrical \& Electronics Engineering (73\%)}{}
+    \resumeSubheading
+      {State Board}{}
+      {Higher Secondary Certificate (HSC) -- 80\%}{}
+    \resumeSubheading
+      {Matriculation Board}{}
+      {Secondary School License (SSLC) -- 89\%}{}
+  \resumeSubHeadingListEnd
+
+%-----------ADDITIONAL INFORMATION-----------
+\section{ADDITIONAL INFORMATION}
+ \begin{itemize}[leftmargin=0.20in, label={}]
+    \small{\item{
+     \textbf{\normalsize{Languages:}}{ 
+     \normalsize{English, Tamil (Read/Write/Speak) $|$ Telugu, Hindi, Kannada (Speak)}} \\[6pt]
+     \textbf{\normalsize{Passport Validity:}}{ 
+     \normalsize{Valid till September 2030}} \\[6pt]
+     \textbf{\normalsize{Current and Preferred Location:}}{ 
+     \normalsize{Bangalore}} \\[6pt]
+     \textbf{\normalsize{Interests:}}{ 
+     \normalsize{Vacations \& Sight seeing, Cooking, Badminton}} \\
+    }}
+ \end{itemize}
+
+\end{document}
