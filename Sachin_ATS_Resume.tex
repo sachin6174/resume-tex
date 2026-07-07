@@ -16,16 +16,18 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{fontawesome5}
+%\usepackage{fontawesome5}
 \usepackage{multicol}
 \usepackage{graphicx}
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
-\input{glyphtounicode}
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+\fi
 
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
-\RequirePackage{fontawesome}
+%\RequirePackage{fontawesome}
 \usepackage{tikz}
 \usetikzlibrary{svg.path}
 
@@ -65,8 +67,10 @@
   \vspace{-5pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+% Ensure generated pdf is machine readable/ATS parsable
+\ifdefined\pdfgentounicode
+  \pdfgentounicode=1
+\fi
 
 %-------------------------
 % Custom commands
@@ -140,7 +144,7 @@ Bengaluru, Karnataka, India \,|\,
 
 %----------SUMMARY----------
 \section{SUMMARY}
-iOS Software Engineer with exactly 3 years 2 months of total iOS/macOS development experience (full-time + internship) as of March 2026 in enterprise mobility products. Expertise in iOS SDK, Swift, SwiftUI, UIKit, Core Data, Swift Concurrency, RESTful API integration, and App Store deployment. Skilled in Xcode, Foundation, memory management, Auto Layout, and implementing MVC/MVVM/VIPER architectural patterns. Experienced in building scalable enterprise applications with performance optimization, test-driven development, and delivering maintainable solutions for App Store Connect and TestFlight distribution.
+iOS Software Engineer with 3+ years of experience in iOS and macOS enterprise mobility solutions. Specialized in Swift, SwiftUI, UIKit, Core Data, Network Extensions, Swift Concurrency, and XPC communication. Experienced in architecting daemonized macOS agents, background network monitoring engines, security policy modules, and deploying production apps to App Store Connect and TestFlight.
 
 %------WORK EXPERIENCE-------
 \section{WORK EXPERIENCE}
@@ -148,22 +152,20 @@ iOS Software Engineer with exactly 3 years 2 months of total iOS/macOS developme
         \resumeSubheading{\href{https://www.42gears.com/}{42 Gears Mobility Systems Private Limited}}{July 2023 -- Present}{iOS Developer}{Bangalore, India}
         \vspace{2pt}
             \resumeItemListStart
-                \resumeItem{\normalsize{Developed \textbf{app management jobs} (\textbf{PKG/DMG} installation, upgrade, uninstall) leveraging \textbf{command-line tools}, \textbf{shell scripting}, \textbf{XPC communication}, and \textbf{process daemonization}, ensuring seamless app lifecycle management across \textbf{10,000+} enterprise \textbf{macOS} devices.}}
-                \resumeItem{\normalsize{Implemented a robust \textbf{Download Manager} for file transfer jobs, supporting \textbf{resumable downloads}, \textbf{progress tracking}, and efficient scheduling via \textbf{concurrent/serial worker processes}, improving large file delivery reliability by \textbf{2x}.}}
-                \resumeItem{\normalsize{Engineered \textbf{geofencing features} using \textbf{Core Location framework} with \textbf{reverse geocoding} and location-based job execution, preventing \textbf{200+ policy violations monthly}, reducing security incidents by \textbf{40\%}, and ensuring \textbf{100\% data compliance} in restricted zones.}}
-                \resumeItem{\normalsize{Implemented \textbf{Time Fence} features for schedule-based policy enforcement and job execution windows, enabling tighter admin control and compliance across managed devices.}}
-                \resumeItem{\normalsize{Utilized \textbf{Core Data} for persistent storage and management of large-scale device information, ensuring data integrity and \textbf{40\%} improved query performance through optimized data models.}}
-                \resumeItem{\normalsize{Built \textbf{device monitoring modules} for uptime tracking, hardware change detection, user management, and remote device actions (reboot/shutdown), achieving \textbf{99.5\%} uptime monitoring and enhancing IT admin visibility and control.}}
-                \resumeItem{\normalsize{Contributed to \textbf{architectural migration} from \textbf{MVVM} to \textbf{VIPER}, reducing critical
-                bugs by \textbf{70\%}, decreasing code coupling by \textbf{60\%}, and improving test coverage from \textbf{40\%} while
-                enhancing code modularity and long-term maintainability.}}
-                \resumeItem{\normalsize{Created \textbf{analytics pipelines} for device events and app usage using \textbf{Foundation Framework} with efficient \textbf{Core Data} operations to save entries, improving device health tracking by \textbf{85\%} and enhancing IT decision-making by \textbf{40\%} through actionable insights.}}
-                \resumeItem{\normalsize{Reduced app crashes by \textbf{90\%} by introducing proper \textbf{thread-safety mechanisms} and optimizing \textbf{concurrency handling}.}}
-                \resumeItem{\normalsize{Worked on \textbf{process daemonization}, \textbf{agent launching}, \textbf{menu bar apps}, and app packaging (\textbf{PKG, DMG}) to streamline deployment and improve reliability by \textbf{60\%} in enterprise environments. Automated package creation workflows using \textbf{GitLab CI/CD}.}}
-                \resumeItem{\normalsize{Implemented \textbf{Just-In-Time (JIT) Access} for on-demand elevated privileges, automating \textbf{95\%} of admin access workflows, reducing IT team workload by \textbf{60\%}, and improving user productivity by \textbf{40\%} while maintaining secure privilege escalation and enterprise policy compliance.}}
-                \resumeItem{\normalsize{Resolved critical issues in \textbf{network extensions}, \textbf{QR enrollment}, \textbf{log encryption}, \textbf{APNs integration}, \textbf{WKWebView}, and job-handling architecture, significantly reducing production defects by \textbf{85\%}.}}
-                \resumeItem{\normalsize{Engineered an internal \textbf{debugger \& QA utility} adopted by \textbf{20+ engineers}, featuring \textbf{real-time log parsing}, \textbf{job status tracking}, and \textbf{payload inspection}. Enabled direct \textbf{Core Data/UserDefaults manipulation} and \textbf{secure data decryption}, slashing debugging cycles by \textbf{40\%} and accelerating feature verification.}}
-                \resumeItem{\normalsize{Built and maintained \textbf{Playwright} and \textbf{Appium} automation for regression and end-to-end workflow validation, improving release confidence and reducing manual QA effort.}}
+                \resumeItem{\normalsize{Developed enterprise \textbf{app management jobs} (\textbf{PKG/DMG} installation, upgrades, and uninstallation) leveraging \textbf{shell scripting}, \textbf{XPC inter-process communication}, and \textbf{LaunchDaemon} process daemonization across \textbf{10,000+} enterprise \textbf{macOS} endpoints.}}
+                \resumeItem{\normalsize{Engineered a resilient \textbf{Download Manager} for file transfer operations, supporting \textbf{resumable chunk downloads}, \textbf{progress callbacks}, and task scheduling via \textbf{concurrent worker queues}.}}
+                \resumeItem{\normalsize{Architected \textbf{Network Extension} modules using the \textbf{NetworkExtension framework} (\textbf{NEFilterProvider}/\textbf{NEAppProxyProvider}) to implement real-time \textbf{App Data Usage tracking} and network traffic filtering across enterprise devices.}}
+                \resumeItem{\normalsize{Engineered location-aware security enforcement using \textbf{Core Location} and \textbf{reverse geocoding} to execute policy restrictions and ensure data compliance in restricted enterprise zones.}}
+                \resumeItem{\normalsize{Implemented \textbf{Time Fence} policy enforcement modules for schedule-based access control and time-restricted execution windows on managed endpoints.}}
+                \resumeItem{\normalsize{Utilized \textbf{Core Data} for persistent storage and management of large-scale device telemetry, optimizing data models, indexes, and batch operations for query performance and data integrity.}}
+                \resumeItem{\normalsize{Built \textbf{device monitoring modules} for hardware state changes, system uptime tracking, user management, and remote administrator actions (system reboot, shutdown).}}
+                \resumeItem{\normalsize{Contributed to architectural refactoring from \textbf{MVVM} to \textbf{VIPER}, decoupling business logic from UI controllers to improve unit testability and long-term codebase maintainability.}}
+                \resumeItem{\normalsize{Created structured \textbf{analytics and event processing pipelines} using \textbf{Foundation} and \textbf{Core Data} to capture device events, health metrics, and network usage diagnostics for IT administrators.}}
+                \resumeItem{\normalsize{Enhanced application thread safety and stability by refactoring legacy asynchronous workflows with \textbf{Swift Concurrency} (\textbf{async/await}, \textbf{Actors}, and \textbf{GCD DispatchQueues}).}}
+                \resumeItem{\normalsize{Managed \textbf{macOS helper agents}, status-bar utility applications, app packaging (\textbf{PKG, DMG}), notarization, and automated build distribution workflows using \textbf{GitLab CI/CD}.}}
+                \resumeItem{\normalsize{Implemented \textbf{Just-In-Time (JIT) Privilege Access} workflows for on-demand privilege escalation, ensuring adherence to enterprise security and compliance standards.}}
+                \resumeItem{\normalsize{Engineered an internal \textbf{developer \& QA diagnostic utility} adopted by \textbf{20+ engineers}, featuring \textbf{real-time log parsing}, \textbf{job payload inspection}, and direct state inspection to accelerate debugging cycles.}}
+                \resumeItem{\normalsize{Built and maintained \textbf{Playwright} and \textbf{Appium} test automation scripts to validate regression workflows and end-to-end device management actions.}}
             \resumeItemListEnd
     \resumeSubHeadingListEnd
 
@@ -173,9 +175,9 @@ iOS Software Engineer with exactly 3 years 2 months of total iOS/macOS developme
         \resumeSubheading{\href{https://www.42gears.com/}{42 Gears Mobility Systems Private Limited}}{February 2023 -- June 2023}{iOS Developer Intern}{Bangalore, India}
         \vspace{2pt}
             \resumeItemListStart
-                \resumeItem{\normalsize{Learned \textbf{Swift}, \textbf{UIKit}, \textbf{SwiftUI}, and applied \textbf{asynchronous programming} techniques to optimize application performance.}}
-                \resumeItem{\normalsize{Gained expertise in \textbf{PKG/DMG} creation, signing, notarization, and worked with \textbf{Core Data}, \textbf{UserDefaults}, and \textbf{Keychain} for secure storage and data management.}}
-                \resumeItem{\normalsize{Developed skills in \textbf{macOS scripting}, \textbf{Agile workflows} with \textbf{Jira}, and maintained code quality using \textbf{SonarQube}.}}
+                \resumeItem{\normalsize{Gained hands-on experience in \textbf{Swift}, \textbf{UIKit}, \textbf{SwiftUI}, and \textbf{asynchronous programming} techniques for iOS and macOS applications.}}
+                \resumeItem{\normalsize{Assisted in \textbf{PKG/DMG} creation, code signing, notarization, and worked with \textbf{Core Data}, \textbf{UserDefaults}, and \textbf{Keychain} for secure local data storage.}}
+                \resumeItem{\normalsize{Developed skills in \textbf{macOS shell scripting}, \textbf{Agile workflows} with \textbf{Jira}, and code quality management using \textbf{SonarQube}.}}
             \resumeItemListEnd
     \resumeSubHeadingListEnd
 
@@ -187,7 +189,7 @@ iOS Software Engineer with exactly 3 years 2 months of total iOS/macOS developme
             {\textbf{\large{\underline{SureMDM Agent for macOS}}} \hspace{0.1cm} 
             \large{\textit{– Enterprise Device Management Platform}}}{Professional Project}
             \resumeItemListStart
-                \resumeItem{\normalsize{\textbf{Details:} Enterprise macOS device management agent with app lifecycle management, security policies, and remote administration}}
+                \resumeItem{\normalsize{\textbf{Details:} Enterprise macOS device management agent featuring app lifecycle management, policy enforcement, and remote administration capabilities.}}
                 \resumeItem{\normalsize{\textbf{Product Link:} \href{https://www.42gears.com/products/mobile-device-management/suremdm-agent-for-macos-past-releases/}{https://www.42gears.com/products/mobile-device-management/suremdm-agent-for-macos-past-releases/}}}
             \resumeItemListEnd 
             \vspace{-9pt}
@@ -196,7 +198,7 @@ iOS Software Engineer with exactly 3 years 2 months of total iOS/macOS developme
             {\textbf{\large{\underline{NotingDown}}} \hspace{0.1cm} 
             \large{\textit{– Built with SwiftUI, Core Data, CloudKit}}}{Personal Project}
             \resumeItemListStart
-                \resumeItem{\normalsize{\textbf{Details:} \textbf{SwiftUI} and \textbf{Core Data} note-taking app}}
+                \resumeItem{\normalsize{\textbf{Details:} Modern note-taking application built with \textbf{SwiftUI} and \textbf{Core Data} with CloudKit integration for seamless data synchronization.}}
                 \resumeItem{\normalsize{\textbf{App Store Link:} \href{https://apps.apple.com/us/app/notingdown/id123456789}{https://apps.apple.com/us/app/notingdown/id123456789}}}
                 \resumeItem{\normalsize{\textbf{GitHub Link:} \href{https://github.com/sachin6174/NotingDown}{https://github.com/sachin6174/NotingDown}}}
             \resumeItemListEnd 
@@ -206,7 +208,7 @@ iOS Software Engineer with exactly 3 years 2 months of total iOS/macOS developme
             {\textbf{\large{\underline{Guitar Utility}}} \hspace{0.1cm} 
             \large{\textit{– Built with SwiftUI, AVFoundation}}}{Personal Project}
             \resumeItemListStart
-                \resumeItem{\normalsize{\textbf{Details:} \textbf{SwiftUI} app for guitar tuning and metronome using \textbf{AVFoundation} framework with custom audio algorithms and \textbf{Core Audio}, achieving \textbf{90\% tuning accuracy}}}
+                \resumeItem{\normalsize{\textbf{Details:} \textbf{SwiftUI} guitar tuner and metronome utility using \textbf{AVFoundation} and \textbf{Core Audio} for real-time pitch processing.}}
                 \resumeItem{\normalsize{\textbf{App Store Link:} \href{https://apps.apple.com/us/app/guitar-utility/id6751228342}{https://apps.apple.com/us/app/guitar-utility/id6751228342}}}
                 \resumeItem{\normalsize{\textbf{GitHub Link:} \href{https://github.com/sachin6174/Guitar-Utility}{https://github.com/sachin6174/Guitar-Utility}}}
             \resumeItemListEnd 
@@ -216,7 +218,7 @@ iOS Software Engineer with exactly 3 years 2 months of total iOS/macOS developme
             {\textbf{\large{\underline{Secure Text}}} \hspace{0.1cm} 
             \large{\textit{– Built with JavaScript, Chrome APIs}}}{Personal Project}
             \resumeItemListStart
-                \resumeItem{\normalsize{\textbf{Details:} \textbf{Chrome extension} for text encryption/decryption with \textbf{Base64/Base32} encoding and secure storage}}
+                \resumeItem{\normalsize{\textbf{Details:} \textbf{Chrome extension} providing text encoding and decoding utilities utilizing \textbf{Base64/Base32} algorithms and Chrome storage APIs.}}
                 \resumeItem{\normalsize{\textbf{Extension Store Link:} \href{https://chromewebstore.google.com/detail/secure-text/ankgchfieiimiijhlcjcongijapefmei}{https://chromewebstore.google.com/detail/secure-text/ankgchfieiimiijhlcjcongijapefmei}}}
                 \resumeItem{\normalsize{\textbf{GitHub Link:} \href{https://github.com/sachin6174/secure-text-chrome-extension}{https://github.com/sachin6174/secure-text-chrome-extension}}}
             \resumeItemListEnd 
@@ -229,18 +231,18 @@ iOS Software Engineer with exactly 3 years 2 months of total iOS/macOS developme
     \small{\item{
      \textbf{\normalsize{Programming Languages:}}{ 
      \normalsize{Swift, Objective-C, JavaScript, C++}} \\
-     \textbf{\normalsize{iOS Development:}}{ 
-     \normalsize{iOS SDK, UIKit, SwiftUI, Combine, Swift Concurrency, Core Data, Core Location, Foundation}} \\
-     \textbf{\normalsize{Development Tools:}}{ 
+     \textbf{\normalsize{iOS / macOS Development:}}{ 
+     \normalsize{iOS SDK, macOS SDK, UIKit, SwiftUI, Combine, Swift Concurrency, Network Extensions (NetworkExtension framework), Core Data, Core Location, Foundation}} \\
+     \textbf{\normalsize{Tools \& Distribution:}}{ 
      \normalsize{Xcode, Instruments, SPM, CocoaPods, GitLab CI/CD, TestFlight, App Store Connect, Git, Jira, SonarQube}} \\
      \textbf{\normalsize{Architecture Patterns:}}{ 
      \normalsize{MVC, MVVM, VIPER, Clean Architecture, Protocol-oriented Programming, Dependency Injection}} \\
-     \textbf{\normalsize{Testing \& Quality:}}{ 
+     \textbf{\normalsize{Testing \& Automation:}}{ 
      \normalsize{XCTest, XCUITest, Playwright, Appium, Unit Testing, UI Testing, Test-driven Development, Debugging}} \\
-     \textbf{\normalsize{Data \& Networking:}}{ 
-     \normalsize{RESTful APIs, Firebase, JSON, Core Data, SQLite, URLSession, Push Notifications}} \\
+     \textbf{\normalsize{Networking \& Storage:}}{ 
+     \normalsize{RESTful APIs, App Data Usage Tracking, Traffic Filtering, Core Data, SQLite, URLSession, Firebase, Push Notifications}} \\
      \textbf{\normalsize{Development Practices:}}{ 
-     \normalsize{Agile Development, Memory Management, Auto Layout, Performance Optimization, Code Review, Peer Review}} \\
+     \normalsize{Agile Methodology, Memory Management, Auto Layout, Performance Optimization, Code Review, Process Daemonization}} \\
     }}
  \end{itemize}
 
@@ -248,7 +250,7 @@ iOS Software Engineer with exactly 3 years 2 months of total iOS/macOS developme
 \section{EDUCATION}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Chandigarh Group of Colleges}{August 2019 - May 2023}
+      {Chandigarh Group of Colleges}{August 2019 -- May 2023}
       {Bachelor of Engineering in Computer Science, CGPA: \textbf{7.9}}{Landran, Mohali}
   \resumeSubHeadingListEnd
 
@@ -256,8 +258,8 @@ iOS Software Engineer with exactly 3 years 2 months of total iOS/macOS developme
 \section{CERTIFICATIONS}
     \vspace{0pt}
     \resumeItemListStart
-        \resumeItem{\normalsize{\href{http://ninjasfiles.s3.amazonaws.com/certificate18894980e4209379ac28665887f78da42bac5c2.pdf}{\textbf{System Design}}: Coding Ninjas (November 2021 - February 2022) - Completed by learning core concepts including scalability, load balancing, database design, and microservices architecture, securing \textbf{90\%+} in assessment}}
-        \resumeItem{\normalsize{\href{https://ninjasfiles.s3.amazonaws.com/certificate19853580c201378561a01f48ae87f59e9220db2.pdf}{\textbf{Data Structures in C++}}: Coding Ninjas (January 2022 - April 2022) - Completed by learning core concepts including arrays, linked lists, trees, graphs, and algorithms, securing \textbf{95\%+} in assessment}}
+        \resumeItem{\normalsize{\href{http://ninjasfiles.s3.amazonaws.com/certificate18894980e4209379ac28665887f78da42bac5c2.pdf}{\textbf{System Design}}: Coding Ninjas (November 2021 -- February 2022) - Completed course covering scalability, load balancing, database design, and microservices architecture.}}
+        \resumeItem{\normalsize{\href{https://ninjasfiles.s3.amazonaws.com/certificate19853580c201378561a01f48ae87f59e9220db2.pdf}{\textbf{Data Structures in C++}}: Coding Ninjas (January 2022 -- April 2022) - Completed course covering core data structures, algorithms, and complexity analysis.}}
     \resumeItemListEnd
 
 %-----------ACHIEVEMENTS-----------
